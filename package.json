@@ -1,0 +1,24 @@
+{
+  "name": "small-shop",
+  "version": "1.0.0",
+  "description": "Small e-commerce using NODE.js",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build-css": "node-sass --include-path scss sass/main.scss   css/style.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Mandela",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "hamburgers": "^1.1.3"
+  }
+}

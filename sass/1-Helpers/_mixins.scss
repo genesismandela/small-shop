@@ -1,0 +1,150 @@
+// FLEX
+@mixin flex($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+// FLEX WRAP
+@mixin flexWrap($wrap) {
+	display: flex;
+	flex-wrap: $wrap;
+}
+// Background Images set-up
+@mixin bgImages {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+// Fluid-font
+@mixin fluid-font(
+	$min,
+	$max,
+	$min-vw: 320px,
+	$max-vw: 1600px,
+	$fallback: false
+) {
+	$min-no-unit: strip-units($min);
+	$max-no-unit: strip-units($max);
+
+	$min-vw-no-unit: strip-units($min-vw);
+	$max-vw-no-unit: strip-units($max-vw);
+
+	@if getUnit($min) == "rem" or getUnit($min) == "em" {
+		$min-no-unit: strip-units($min) * 10;
+		$max-no-unit: strip-units($max) * 10;
+	}
+
+	$responsive: calc(
+		#{$min-no-unit}px + (#{$max-no-unit} - #{$min-no-unit}) *
+			((100vw - #{$min-vw}) / (#{$max-vw-no-unit} - #{$min-vw-no-unit}))
+	);
+
+	@if $fallback {
+		font-size: $fallback;
+	} @else {
+		font-size: $max;
+	}
+
+	font-size: $responsive;
+
+	@media screen and (max-width: #{$min-vw}) {
+		font-size: $min;
+	}
+	@media screen and (min-width: #{$max-vw}) {
+		font-size: $max;
+	}
+}
+
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+@function getUnit($value) {
+	@return str-slice($value * 0 + "", 2, -1);
+}
+/*
+/// $min - Minimum font size (px, rem)
+/// $max - Maximum font size (px, rem)
+/// $min-vw - Minimum viewport value lock range (px) --(optional)
+/// $max-vw - Maximum viewport value lock range (px) --(optional)
+/// $fallback - fallback font size (px, rem) --(optional)
+*/
+
+// Double Border Animation
+// @mixin borderCornerDouble($borderColor, $borderWidth) {
+// 	&::after,
+// 	&::before {
+// 		content: "";
+// 		display: block;
+// 		position: absolute;
+// 		width: 20%;
+// 		height: 20%;
+// 		border: $borderWidth solid;
+// 		transition: all 0.6s ease;
+// 	}
+// 	&::after {
+// 		bottom: 0;
+// 		right: 0;
+// 		border-top-color: transparent;
+// 		border-left-color: transparent;
+// 		border-bottom-color: $borderColor;
+// 		border-right-color: $borderColor;
+// 	}
+// 	&::before {
+// 		top: 0;
+// 		left: 0;
+// 		border-bottom-color: transparent;
+// 		border-right-color: transparent;
+// 		border-top-color: $borderColor;
+// 		border-left-color: $borderColor;
+// 	}
+// 	&:hover:after,
+// 	&:hover:before {
+// 		border-bottom-color: $borderColor;
+// 		border-right-color: $borderColor;
+// 		border-top-color: $borderColor;
+// 		border-left-color: $borderColor;
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }
+
+// // Fill Text Color in Hover
+// @mixin fillColorEffect($direction, $textColor, $colorToFill) {
+// 	background: linear-gradient($direction, $textColor 50%, $colorToFill 50%);
+// 	background-clip: text;
+// 	-webkit-background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	background-position: 100%;
+// 	background-size: 200% 100%;
+
+// 	&:hover {
+// 		background-position: 0 100%;
+// 	}
+// }
+
+// @mixin borderClipPath($borderColor) {
+// 	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+// 		-webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 90%);
+// 		clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 98%);
+// 	}
+// 	border: 5px solid $borderColor;
+// }
+
+// @mixin borderClipPath2($borderColor) {
+// 	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+// 		-webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 0 97%, 0 0);
+// 		clip-path: polygon(
+// 			50% 2%,
+// 			100% 0,
+// 			100% 48%,
+// 			100% 100%,
+// 			51% 97%,
+// 			0 100%,
+// 			0 0
+// 		);
+// 	}
+// 	border: 5px solid $borderColor;
+// }
