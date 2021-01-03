@@ -1,17 +1,19 @@
-// Shared Colors
-$color-black: #000;
-$color-white: #fff;
-$color-grey: #808080;
+// Colors
+$black: #000;
+$grey-dark: #3d3d3d;
+$grey: #848484;
+$grey-light: #bbb;
+$white: #fff;
 
-// Main Colors
-$red-light: rgb(250, 61, 91);
-$red-dark: rgb(93, 9, 15);
-$green-light: rgb(57, 148, 65);
-$green-dark: rgb(10, 41, 16);
-$dark: rgb(14, 20, 23);
-$dark-light: rgb(37, 46, 50);
-$light-dark: rgb(197, 197, 197);
-$light: rgb(228, 228, 228);
+// // Main Colors
+// $red-light: rgb(250, 61, 91);
+// $red-dark: rgb(93, 9, 15);
+// $green-light: rgb(57, 148, 65);
+// $green-dark: rgb(10, 41, 16);
+// $dark: rgb(14, 20, 23);
+// $dark-light: rgb(37, 46, 50);
+// $light-dark: rgb(197, 197, 197);
+// $light: rgb(228, 228, 228);
 
 // RESPONSIVE BREAKPOINTS
 $bp-desktop: 75em; // 1200px

@@ -1,0 +1,170 @@
+.shop-cart {
+	margin-right: 1rem;
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.cart-resume {
+	background-color: rgba($white, 0.45);
+	border: 1px solid $grey;
+	border-radius: 4px;
+	position: absolute;
+	top: 7.5rem;
+	right: 0;
+	height: calc(100vh - 7.5rem);
+	width: 32rem;
+	overflow-y: scroll;
+	animation: growDown 300ms ease-in forwards;
+	transform-origin: top center;
+	@include flex(column, initial, center);
+	padding-top: 1.5rem;
+	// &__product * {
+	// 	border: 1px solid black;
+	// }
+
+	&__product {
+		@include flex(row, initial, center);
+		width: 95%;
+		min-height: 7.5rem;
+
+		padding: 1rem;
+		margin-bottom: 1.5rem;
+		border: 1px solid $grey-light;
+		border-radius: 4px;
+		background-color: $white;
+
+		&__delete {
+			flex: 5%;
+			align-self: center;
+			text-align: center;
+			margin-right: 0.5rem;
+			font-weight: 300;
+			font-size: 1.5rem;
+			cursor: pointer;
+
+			&:hover {
+				font-weight: 400;
+			}
+		}
+
+		&__image {
+			flex: 15%;
+
+			&__img {
+				object-fit: contain;
+
+				border-radius: 3px;
+			}
+		}
+
+		&__details {
+			flex: 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			&__name {
+				padding: 0.5rem;
+				@include fluid-font(15px, 18px);
+			}
+
+			&__feature {
+				@include fluid-font(10px, 12px);
+				padding-left: 0.5rem;
+
+				&--size {
+					margin-right: 2rem;
+				}
+
+				&--quantity {
+				}
+			}
+		}
+
+		&__prices {
+			flex: 15%;
+			margin-left: 0.15rem;
+			@include flex(column, space-between, center);
+			font-weight: bold;
+
+			&__price {
+				padding: 0.4rem;
+				&--old {
+					@include fluid-font(12px, 14px);
+					text-decoration: line-through;
+					color: $grey-light;
+				}
+
+				&--new {
+					@include fluid-font(14px, 16px);
+				}
+			}
+		}
+	}
+
+	&__total-price {
+		@include flex(column, initial, flex-end);
+		padding: 1rem;
+		align-self: flex-end;
+		margin: 5rem 0 2.5rem;
+		min-height: 14rem;
+
+		p {
+			padding: 1.25rem;
+			@include fluid-font(10px, 12px);
+			font-weight: bold;
+		}
+
+		&__no-vat {
+			&--amount {
+			}
+		}
+
+		&__vat {
+			&--amount {
+			}
+		}
+
+		&__total {
+			@include fluid-font(14px, 16px);
+			&--amount {
+			}
+		}
+
+		.calc-amount {
+		}
+	}
+
+	&__checkout {
+		width: 90%;
+		padding: 1rem;
+
+		&__btn {
+			width: 100%;
+			@include fluid-font(15px, 16px);
+			border: 1px solid $grey-dark;
+			border-radius: 4px;
+			background-color: $grey-dark;
+			padding: 0.5rem;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+
+	&__close {
+		font-size: 1.4rem;
+		cursor: pointer;
+
+		&__text {
+			text-decoration: underline;
+		}
+	}
+}
+
+.cart-display {
+	display: none;
+}
