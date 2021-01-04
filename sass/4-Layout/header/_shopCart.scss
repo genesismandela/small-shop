@@ -158,6 +158,15 @@
 	&__close {
 		font-size: 1.4rem;
 		cursor: pointer;
+		padding-bottom: 3rem;
+
+		&:active {
+			color: $grey;
+
+			.cart-resume__close__text {
+				text-decoration: none;
+			}
+		}
 
 		&__text {
 			text-decoration: underline;

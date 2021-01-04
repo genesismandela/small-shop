@@ -1,13 +1,3 @@
-// @media only screen and(max-width: 550px) {
-// 	.nav {
-// 		position: absolute;
-// 		height: calc(100vh - 7.5rem);
-// 		background-color: blueviolet;
-
-// 		top: 7.5rem;
-// 	}
-// }
-
 .nav {
 	.list {
 		display: flex;
@@ -25,7 +15,7 @@
 		align-items: center;
 		perspective: 1000px;
 
-		@media only screen and(max-width: 550px) {
+		@media only screen and(max-width: 350px) {
 			perspective: none;
 		}
 
@@ -54,7 +44,7 @@
 			position: absolute;
 			top: 7.5rem;
 			left: 0;
-			width: 32rem;
+			width: 30rem;
 			padding: 1rem 0;
 			display: none;
 			animation: growDown 300ms ease-in-out forwards;

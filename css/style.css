@@ -86,7 +86,7 @@ header {
   @media screen and (min-width: 1600px) {
     .nav .item {
       font-size: 28px; } }
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 350px) {
     .nav .item {
       perspective: none; } }
   .nav .item::after {
@@ -110,7 +110,7 @@ header {
     position: absolute;
     top: 7.5rem;
     left: 0;
-    width: 32rem;
+    width: 30rem;
     padding: 1rem 0;
     display: none;
     animation: growDown 300ms ease-in-out forwards;
@@ -305,7 +305,12 @@ header {
           font-size: 16px; } }
   .cart-resume__close {
     font-size: 1.4rem;
-    cursor: pointer; }
+    cursor: pointer;
+    padding-bottom: 3rem; }
+    .cart-resume__close:active {
+      color: #848484; }
+      .cart-resume__close:active .cart-resume__close__text {
+        text-decoration: none; }
     .cart-resume__close__text {
       text-decoration: underline; }
 
