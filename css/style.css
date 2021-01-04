@@ -140,7 +140,7 @@ header {
       @media screen and (min-width: 1600px) {
         .nav .item__dropdown__item {
           font-size: 22px; } }
-      .nav .item__dropdown__item.item-icon {
+      .nav .item__dropdown__item__icon {
         margin-right: 0.5rem;
         color: #3d3d3d; }
   .nav .item:hover::after {
