@@ -20,5 +20,8 @@
   "homepage": "",
   "dependencies": {
     "hamburgers": "^1.1.3"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }

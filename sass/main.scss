@@ -6,5 +6,11 @@
 // Webpage Base
 @import "2-Base/base";
 
+// Utilities
+@import "3-Utilities/utility";
+
 // Layout
-@import "3-Layout/hamburger";
+// Layout - header
+@import "4-Layout/header/logo";
+@import "4-Layout/header/nav";
+@import "4-Layout/header/shopCart";
