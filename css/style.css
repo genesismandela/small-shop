@@ -141,8 +141,10 @@ header {
         .nav .item__dropdown__item {
           font-size: 22px; } }
       .nav .item__dropdown__item__icon {
-        margin-right: 0.5rem;
-        color: #3d3d3d; }
+        font-size: 0.75rem;
+        margin-right: 1rem;
+        color: #3d3d3d;
+        fill: #3d3d3d; }
   .nav .item:hover::after {
     width: 100%; }
   .nav .item:hover .item__dropdown {

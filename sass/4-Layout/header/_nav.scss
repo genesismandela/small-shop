@@ -65,8 +65,10 @@
 				cursor: pointer;
 
 				&__icon {
-					margin-right: 0.5rem;
+					font-size: 0.75rem;
+					margin-right: 1rem;
 					color: $grey-dark;
+					fill: $grey-dark;
 				}
 			}
 		}
