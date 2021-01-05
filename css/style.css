@@ -125,6 +125,9 @@ main {
     display: none;
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center; }
+    @media screen and (max-width: 479px) {
+      .nav .item__dropdown {
+        color: #000; } }
     .nav .item__dropdown__heading {
       font-size: 26px;
       font-size: calc( 18px + (26 - 18) * ((100vw - 320px) / (1600 - 320)));
