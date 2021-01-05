@@ -24,8 +24,16 @@ img {
 body {
 	background-image: url(../img/background.jpg);
 	@include bgImages;
+	background-attachment: fixed;
 	height: 100vh;
 	width: 100%;
+
+	@media screen and (max-width: 479px) {
+		background-image: none;
+		background-color: $black;
+
+		color: $white;
+	}
 }
 
 header {
@@ -34,4 +42,9 @@ header {
 	background-color: rgba($white, 0.25);
 	border-bottom: 1px solid $grey-light;
 	position: relative;
+}
+
+main {
+	height: calc(100vh - 7.5rem);
+	width: 100%;
 }

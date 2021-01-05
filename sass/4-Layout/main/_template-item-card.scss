@@ -1,0 +1,148 @@
+.item-card {
+	@include flex(row, center, center);
+
+	height: 100vh;
+	margin: 2rem;
+
+	border-radius: 3px;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	@media only screen and (max-width: 980px) {
+		flex-direction: column;
+		overflow: scroll;
+		margin-top: 7.5rem;
+
+		height: initial;
+	}
+
+	&__img-box {
+		flex: 50%;
+		padding: 2rem;
+	}
+
+	&__img {
+		max-height: 50rem;
+		object-fit: cover;
+		border-radius: 4px;
+
+		@media only screen and (max-width: 980px) {
+			max-width: 650px;
+		}
+	}
+
+	&__form {
+		flex: 50%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, min-content), 1fr, min-content;
+		grid-gap: 0.5rem;
+
+		padding: 2rem 0;
+		background-color: rgba($white, 0.9);
+		border-radius: 3px;
+		margin: 0 1rem;
+		margin-bottom: 2rem;
+		position: relative;
+
+		@media only screen and (max-width: 980px) {
+			max-width: 600px;
+		}
+
+		@media screen and (max-width: 479px) {
+			color: $black;
+		}
+
+		&__back {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			font-size: 3rem;
+			color: $black;
+			cursor: pointer;
+		}
+
+		&__heading {
+			@include fluid-font(26px, 42px);
+			grid-column: 1/-1;
+			grid-row: 1/2;
+			padding: 1rem;
+		}
+
+		&__description {
+			@include fluid-font(16px, 16px);
+			grid-column: 1/-1;
+			grid-row: 3/4;
+			padding: 1rem;
+		}
+
+		&__sizes {
+			align-self: center;
+			@include flex(row, flex-start, center);
+			flex-wrap: wrap;
+			grid-column: 1/-1;
+			grid-row: 4/5;
+			margin-bottom: 3rem;
+			padding-left: 1rem;
+
+			label {
+				font-style: italic;
+				font-size: 2rem;
+				padding: 1rem;
+				position: relative;
+				z-index: 5;
+				background-color: transparent;
+				border: 1px solid $grey-light;
+				border-radius: 3px;
+				text-transform: uppercase;
+				color: $black;
+				cursor: pointer;
+				margin: 0 1.5rem 1rem 0;
+			}
+
+			input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+
+				&:checked {
+					background-color: $black;
+				}
+			}
+		}
+
+		&__prices {
+			@include fluid-font(14px, 22px);
+			margin-left: 1rem;
+
+			&--old {
+				grid-column: 1/2;
+				grid-row: 2/3;
+				color: $grey-light;
+				text-decoration: line-through;
+			}
+
+			&--new {
+				grid-column: 2/3;
+				grid-row: 2/3;
+				color: $grey-dark;
+			}
+		}
+
+		&__submit {
+			grid-column: 2/4;
+			grid-row: 5/6;
+			height: 3rem;
+
+			background-color: transparent;
+			border: 1px solid $black;
+			border-radius: 3px;
+
+			&:hover {
+				background-color: $black;
+				color: $white;
+			}
+		}
+	}
+}

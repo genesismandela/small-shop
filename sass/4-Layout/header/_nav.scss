@@ -35,7 +35,7 @@
 		}
 
 		&__dropdown {
-			background-color: rgba($white, 0.75);
+			background-color: $white;
 			border: 1px solid $grey;
 			border-radius: 3px;
 			cursor: initial;
@@ -49,6 +49,10 @@
 			display: none;
 			animation: growDown 300ms ease-in-out forwards;
 			transform-origin: top center;
+
+			@media screen and (max-width: 479px) {
+				color: $black;
+			}
 
 			&__heading {
 				@include fluid-font(18px, 26px);

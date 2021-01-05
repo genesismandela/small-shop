@@ -1,0 +1,71 @@
+.products {
+	@include flex(column, initial, initial);
+
+	&__heading {
+		@include fluid-font(24px, 54px);
+		margin-left: 3rem;
+		margin-top: 3rem;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		grid-gap: 2rem;
+
+		padding: 5rem;
+
+		@media only screen and(max-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media only screen and(max-width: 600px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		&__link {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&__card {
+			border: 2px solid $white;
+			border-radius: 3px;
+			padding: 0.5rem;
+
+			cursor: pointer;
+			transition: all 1s;
+
+			&:hover {
+				background-color: $grey-light;
+			}
+			&__img {
+				height: 40rem;
+				width: 100%;
+				object-fit: cover;
+				border: 1px solid $white;
+				border-radius: 4px;
+			}
+
+			&__product {
+				@include fluid-font(18px, 32px);
+				padding: 0.5rem;
+			}
+
+			&__price {
+				@include fluid-font(18px, 22px);
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				justify-items: end;
+				&--old {
+					color: $grey;
+					text-decoration: line-through;
+				}
+
+				&--new {
+					color: $white;
+				}
+			}
+		}
+	}
+}
