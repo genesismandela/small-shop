@@ -570,7 +570,7 @@ main {
           .products__cards__card__price {
             font-size: 22px; } }
         .products__cards__card__price--old {
-          color: #bbb;
+          color: #848484;
           text-decoration: line-through; }
         .products__cards__card__price--new {
           color: #3d3d3d; }
