@@ -38,6 +38,10 @@
 		border-radius: 4px;
 		background-color: $grey-light;
 
+		@media screen and (max-width: 479px) {
+			color: $black;
+		}
+
 		&__delete {
 			flex: 5%;
 			align-self: center;
@@ -114,6 +118,10 @@
 		margin: 5rem 0 2.5rem;
 		min-height: 14rem;
 
+		@media screen and (max-width: 479px) {
+			color: $black;
+		}
+
 		p {
 			padding: 1.25rem;
 			@include fluid-font(10px, 12px);
@@ -160,6 +168,10 @@
 		font-size: 1.4rem;
 		cursor: pointer;
 		padding-bottom: 3rem;
+
+		@media screen and (max-width: 479px) {
+			color: $black;
+		}
 
 		&:active {
 			color: $grey;

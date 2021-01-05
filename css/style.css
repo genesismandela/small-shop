@@ -200,6 +200,9 @@ main {
     border: 1px solid #3d3d3d;
     border-radius: 4px;
     background-color: #bbb; }
+    @media screen and (max-width: 479px) {
+      .cart-resume__product {
+        color: #000; } }
     .cart-resume__product__delete {
       flex: 5%;
       align-self: center;
@@ -281,6 +284,9 @@ main {
     align-self: flex-end;
     margin: 5rem 0 2.5rem;
     min-height: 14rem; }
+    @media screen and (max-width: 479px) {
+      .cart-resume__total-price {
+        color: #000; } }
     .cart-resume__total-price p {
       padding: 1.25rem;
       font-size: 12px;
@@ -324,6 +330,9 @@ main {
     font-size: 1.4rem;
     cursor: pointer;
     padding-bottom: 3rem; }
+    @media screen and (max-width: 479px) {
+      .cart-resume__close {
+        color: #000; } }
     .cart-resume__close:active {
       color: #848484; }
       .cart-resume__close:active .cart-resume__close__text {
