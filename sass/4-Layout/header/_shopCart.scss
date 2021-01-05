@@ -9,7 +9,7 @@
 }
 
 .cart-resume {
-	background-color: rgba($white, 0.45);
+	background-color: $white;
 	border: 1px solid $grey;
 	border-radius: 4px;
 	position: absolute;
@@ -25,6 +25,7 @@
 	// &__product * {
 	// 	border: 1px solid black;
 	// }
+	z-index: 5;
 
 	&__product {
 		@include flex(row, initial, center);
@@ -33,9 +34,9 @@
 
 		padding: 1rem;
 		margin-bottom: 1.5rem;
-		border: 1px solid $grey-light;
+		border: 1px solid $grey-dark;
 		border-radius: 4px;
-		background-color: $white;
+		background-color: $grey-light;
 
 		&__delete {
 			flex: 5%;
@@ -96,7 +97,7 @@
 				&--old {
 					@include fluid-font(12px, 14px);
 					text-decoration: line-through;
-					color: $grey-light;
+					color: $white;
 				}
 
 				&--new {
