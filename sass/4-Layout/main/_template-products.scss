@@ -37,7 +37,7 @@
 			transition: all 1s;
 
 			&:hover {
-				background-color: $white;
+				background-color: $grey-light;
 			}
 			&__img {
 				height: 40rem;
@@ -53,7 +53,7 @@
 			}
 
 			&__price {
-				@include fluid-font(14px, 22px);
+				@include fluid-font(18px, 22px);
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				justify-items: end;
@@ -63,7 +63,7 @@
 				}
 
 				&--new {
-					color: $grey-dark;
+					color: $white;
 				}
 			}
 		}
