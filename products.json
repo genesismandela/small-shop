@@ -2,7 +2,7 @@
     {
         "id": 0,
         "productName": "Elegant Slim Jeans",
-        "image": "img/clothes/men-jeans-id0.jpg",
+        "image": "../img/clothes/men-jeans-id0.jpg",
         "gender": "Male",
         "category": "Men jeans",
         "sizes": "['XS', 'S', 'M', 'L', 'XL']",
@@ -13,7 +13,7 @@
     {
         "id": 1,
         "productName": "Casual Broken Jeans",
-        "image": "img/clothes/men-jeans-id1.jpg",
+        "image": "../img/clothes/men-jeans-id1.jpg",
         "gender": "Male",
         "category": "Men jeans",
         "sizes": "['XS', 'S', 'M', 'L', 'XL']",
@@ -24,7 +24,7 @@
     {
         "id": 2,
         "productName": "Modern Slim Jeans",
-        "image": "img/clothes/men-jeans-id2.jpg",
+        "image": "../img/clothes/men-jeans-id2.jpg",
         "gender": "Male",
         "category": "Men jeans",
         "sizes": "['XS', 'S', 'M', 'L', 'XL']",
@@ -35,7 +35,7 @@
     {
         "id": 3,
         "productName": "Old School Straight",
-        "image": "img/clothes/men-jeans-id3.jpg",
+        "image": "../img/clothes/men-jeans-id3.jpg",
         "gender": "Male",
         "category": "Men jeans",
         "sizes": "['XS', 'S', 'M', 'L', 'XL']",
