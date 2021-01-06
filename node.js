@@ -56,3 +56,18 @@ const server = http.createServer((req, res) => {
 server.listen(3000, "127.0.0.1", () => {
 	console.log("Listening requests: port 3000");
 });
+
+// // CSS File
+// fs.readFile(`${__dirname}/css/style.css`, function (err, cssdata) {
+// 	if (err) console.log("err");
+// 	res.writeHead(200, { "Content-Type": "text/css" });
+// 	res.write(cssdata);
+// 	res.end(cssdata);
+// });
+// // JS File
+// fs.readFile(`${__dirname}/scripts/dom.js`, function (err, jsdata) {
+// 	if (err) console.log("err");
+// 	res.writeHead(200, { "Content-Type": "text/javascript" });
+// 	res.write(jsdata);
+// 	res.end(jsdata);
+// });
